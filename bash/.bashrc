@@ -5,8 +5,6 @@
 export LANG=C
 export GOROOT=/opt/go
 export PATH=$PATH:$GOROOT/bin
-echo -e "\e[36mHello Materialofmouse!!"
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -84,11 +82,26 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+case  "${OSTYPE}" in
+darwin*)
+	alias ls='ls -G'
+	alias ll='ls -lG'
+	alias la='ls -laG'
+	;;
+linux*)
+	alias ll='ls -alF'
+	alias la='ls -A'
+	alias l='ls -CF'
+	;;
+esac
 
 # Alias definitions.
+
+cd ()
+{
+	builtin cd "$@" && ls --color=auto
+}
+
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
@@ -97,8 +110,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PS1="\[\e[34m\e[47m\][\d \t \u@ \W]\[\e[0m\]\n\e[36mbash[\#] > \[\e[00m\]"
-
+export PS1='\[\e[1m\e[92m\u\]@\[\h\e[0m:\e[1m\e[34m\w\e[0m\$\e[0m\] '
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
