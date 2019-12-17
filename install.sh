@@ -1,4 +1,6 @@
 #!/usr/bin/bash
-sudo cp -r bash/.bashrc ~/
-sudo cp -r vim/.vimrc vim/.vim ~/
+ln -fs $(pwd)/bash/.bashrc ~/.bashrc
+cp -r  $(pwd)/bash/.machine_env ~/
+ln -fs $(pwd)/vim/.vimrc ~/.vimrc
+ln -fs $(pwd)/vim/.vim ~/.vim
 

@@ -5,6 +5,7 @@
 export LANG=C
 export GOROOT=/opt/go
 export PATH=$PATH:$GOROOT/bin
+source .machine_env
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
