@@ -3,9 +3,10 @@
 # for example
 
 export LANG=C
-export GOROOT=/opt/go
-export PATH=$PATH:$GOROOT/bin
-source .machine_env
+export GOROOT=/home/mouse/go
+export GOPATH=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
+source /home/mouse/.machine_env
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -110,8 +111,7 @@ cd ()
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-export PS1='\[\e[1m\e[92m\u\]@\[\h\e[0m:\e[1m\e[34m\w\e[0m\$\e[0m\] '
+export PS1='\[\e[1;92m\]\u@\[\h\e[0m\]:\e[1;34m\]\w\e[0m\]$ '
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
