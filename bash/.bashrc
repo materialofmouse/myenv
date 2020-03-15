@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for example
 
-export LANG=C
+export LANG=en_US.UTF-8
 export GOROOT=/home/mouse/go
 export GOPATH=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
