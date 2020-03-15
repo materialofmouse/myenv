@@ -3,10 +3,10 @@
 # for example
 
 export LANG=ja_JP.UTF-8
-export GOROOT=/home/mouse/go
+export GOROOT=/home/$USER/go
 export GOPATH=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
-source /home/mouse/.machine_env
+source /home/$USER/.machine_env
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
