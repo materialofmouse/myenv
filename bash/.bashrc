@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for example
 
-export LANG=en_US.UTF-8
+export LANG=ja_JP.UTF-8
 export GOROOT=/home/mouse/go
 export GOPATH=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
@@ -111,7 +111,7 @@ cd ()
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-export PS1='\[\e[1;92m\]\u@\[\h\e[0m\]:\e[1;34m\]\w\e[0m\]$ '
+export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
