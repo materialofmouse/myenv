@@ -3,9 +3,9 @@
 # for example
 
 export LANG=ja_JP.UTF-8
-export GOROOT=/home/$USER/go
-export GOPATH=/usr/local/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=/home/$USER/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 source /home/$USER/.machine_env
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
