@@ -3,8 +3,9 @@
 # for example
 
 export LANG=ja_JP.UTF-8
-export GOROOT=/home/$USER/go
-export GOPATH=/usr/local/go
+export GOPATH=/home/$USER/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 source /home/$USER/.machine_env
 # If not running interactively, don't do anything
@@ -118,3 +119,5 @@ export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+export LANG=ja_JP.UTF-8
+export LANGUAGE="ja_JP:ja"
