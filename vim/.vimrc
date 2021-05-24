@@ -1,5 +1,11 @@
 call plug#begin('~/.vim/plugged')
 Plug 'croaker/mustang-vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 inoremap <C-e> <Esc>&
