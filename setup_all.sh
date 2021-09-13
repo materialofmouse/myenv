@@ -1,4 +1,5 @@
 #!/bin/bash
-package_install.sh
-git_setup.sh
-env_setup.sh
+
+bash git_setup.sh
+bash package_install.sh
+bash env_setup.sh
