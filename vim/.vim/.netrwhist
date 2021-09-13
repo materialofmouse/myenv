@@ -1,5 +1,13 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhistcnt =3
 let g:netrw_dirhist_3='/etc'
 let g:netrw_dirhist_2='/etc/mysql/mysql.conf.d'
 let g:netrw_dirhist_1='/etc/mysql/conf.d'
+=======
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ubuntu/myenv/bash'
+let g:netrw_dirhist_2='/home/mouse/container'
+let g:netrw_dirhist_3='/home/awa/myenv/bash'
+let g:netrw_dirhist_4='/home/mouse/USN/back'
+>>>>>>> a2708408c9b425255aae39fc0fccb80bb29c4a83
