@@ -1,30 +1,12 @@
-if has('vim_starting')
-    " 初回起動時のみruntimepathにNeoBundleのパスを指定する
-    set runtimepath+=`HOME`/.vim/bundle/neobundle.vim/
-
-    " NeoBundleが未インストールであればgit cloneする・・・・・・①
-    if !isdirectory(expand("`HOME`/.vim/bundle/neobundle.vim/"))
-        echo "install NeoBundle..."
-        :call system("git clone git://github.com/Shougo/neobundle.vim `HOME`/.vim/bundle/neobundle.vim")
-    endif
-endif
-
-call neobundle#begin(expand('`HOME`/.vim/bundle/'))
-" インストールするVimプラグインを以下に記述
-function! ProcessingRun()
-	!prun
-endfunction
-
-noremap <Plug>(processing_run) : <C-u>call ProcessingRun()<CR>
-
-NeoBundleFetch 'shougo/neobundle.vim'
-
-NeoBundle 'sophacles/vim-processing'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'sophacles/vim-processing'
-
-call neobundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'croaker/mustang-vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+call plug#end()
 
 inoremap <C-e> <Esc>&
 inoremap <C-a> <Esc>^
@@ -44,7 +26,7 @@ noremap <C-Right> :wnext<CR>
 inoremap <C-Left> :wprevious<CR>
 noremap <C-Left> :wprevious<CR>
 
-noremap <C-w> :w<CR>
+"noremap <C-w> :w<CR>
 
 set fenc=utf-8
 scriptencoding utf-8
