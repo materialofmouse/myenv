@@ -26,7 +26,7 @@ noremap <C-Right> :wnext<CR>
 inoremap <C-Left> :wprevious<CR>
 noremap <C-Left> :wprevious<CR>
 
-noremap <C-w> :w<CR>
+"noremap <C-w> :w<CR>
 
 set fenc=utf-8
 scriptencoding utf-8
