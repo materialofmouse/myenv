@@ -6,10 +6,6 @@ export LANG=ja_JP.UTF-8
 export GOPATH=/home/$USER/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
-<<<<<<< HEAD
-export PATH=$PATH:$GOPATH/bin
-=======
->>>>>>> a2708408c9b425255aae39fc0fccb80bb29c4a83
 source /home/$USER/.machine_env
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
