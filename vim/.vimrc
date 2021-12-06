@@ -8,6 +8,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
+" -- mapping -- "
 inoremap <C-e> <Esc>&
 inoremap <C-a> <Esc>^
 noremap <C-e> <Esc>$
@@ -22,12 +23,17 @@ map <C-r> <Plug>(processing_run)
 inoremap <C-Right> :wnext<CR>
 noremap <C-Right> :wnext<CR>
 
-
 inoremap <C-Left> :wprevious<CR>
 noremap <C-Left> :wprevious<CR>
 
-"noremap <C-w> :w<CR>
+map <C-n> :NERDTreeToggle<CR>
 
+" -- auto cmd -- "
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" -- vim setting -- "
 set fenc=utf-8
 scriptencoding utf-8
 set nobackup
