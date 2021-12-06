@@ -6,6 +6,9 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " -- mapping -- "
@@ -17,14 +20,8 @@ noremap <C-a> <Esc>^
 noremap ; :
 noremap ZQ <Nop>
 
-imap <C-r> <Plug>(processing_run)
-map <C-r> <Plug>(processing_run)
-
-inoremap <C-Right> :wnext<CR>
-noremap <C-Right> :wnext<CR>
-
-inoremap <C-Left> :wprevious<CR>
-noremap <C-Left> :wprevious<CR>
+"imap <C-r> <Plug>(processing_run)
+"map <C-r> <Plug>(processing_run)
 
 map <C-n> :NERDTreeToggle<CR>
 
