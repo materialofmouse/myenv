@@ -1,5 +1,5 @@
 #!/bin/bash
 
-bash git_setup.sh
-bash package_install.sh
-bash env_setup.sh
+bash scripts/git_setup.sh
+bash scripts/package_install.sh
+bash scripts/env_setup.sh
