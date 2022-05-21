@@ -11,18 +11,34 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-" -- mapping -- "
-inoremap <C-e> <Esc>&
+" -- key mapping -- "
+" > map init
+nmap <esc>w <M-w>
+imap <esc>w <M-w>
+imap <esc>a <M-a>
+imap <esc>c <M-c>
+nmap <esc>c <M-c>
+imap <esc>s <M-s>
+nmap <esc>s <M-s>
+imap <esc>e <M-e>
+nmap <esc>e <M-e>
+
+" > bash keymap
+inoremap <C-e> <Esc>$
 inoremap <C-a> <Esc>^
 noremap <C-e> <Esc>$
 noremap <C-a> <Esc>^
+vnoremap <C-e> $
+vnoremap <C-a> ^
 
+inoremap <M-w> <C-w> 
+noremap <M-w> <C-w>
+inoremap <M-e> <esc>
+
+" > etc
 noremap ; :
 noremap ZQ <Nop>
 
-nmap <esc>w <M-w>
-inoremap <M-w> <C-w>
-noremap  <M-w> <C-w>
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -30,6 +46,20 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"-- airline settings -- "
+let g:airline_theme = 'deus'
+if !exists('g/airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+let g:airline_mode_map = {
+	\ 'n' : 'NORMAL',
+	\ 'i' : 'INSERT',
+	\ 'v' : 'VISUAL',
+	\ 'c' : 'COMMAND',
+	\ 'R' : 'REPLACE'
+	\ }
 
 " -- vim setting -- "
 set fenc=utf-8
