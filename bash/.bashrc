@@ -123,5 +123,5 @@ export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
-export LANG=ja_JP.UTF-8
-export LANGUAGE="ja_JP:ja"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
