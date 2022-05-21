@@ -7,6 +7,7 @@ export LC_ALL=en_US.UTF-8
 export GOPATH=/home/$USER/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
+
 alias gb='git branch'
 alias gs='git status'
 alias gc='git checkout'
@@ -19,16 +20,15 @@ alias gp='git push'
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
-
-# append to the history file, don't overwrite it
-shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+shopt -u histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# update the values of LINES and COechoLUMNS.
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -117,7 +117,12 @@ cd ()
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
+if [ `uname` = "Linux" ]; then
+	export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
+elif [ `uname` = "FreeBSD" ];then
+	export PS1='\[\e[1;91m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
