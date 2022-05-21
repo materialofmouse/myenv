@@ -20,8 +20,9 @@ noremap <C-a> <Esc>^
 noremap ; :
 noremap ZQ <Nop>
 
-"imap <C-r> <Plug>(processing_run)
-"map <C-r> <Plug>(processing_run)
+nmap <esc>w <M-w>
+inoremap <M-w> <C-w>
+noremap  <M-w> <C-w>
 
 map <C-n> :NERDTreeToggle<CR>
 
