@@ -1,8 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for example
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-export LANG=ja_JP.UTF-8
 export GOPATH=/home/$USER/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
@@ -123,5 +124,4 @@ export PS1='\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+
