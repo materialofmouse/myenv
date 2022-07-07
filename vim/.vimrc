@@ -38,9 +38,10 @@ inoremap <M-e> <esc>
 " > etc
 noremap ; :
 noremap ZQ <Nop>
-
-
 map <C-n> :NERDTreeToggle<CR>
+
+" > terminal
+set termwinkey=<esc>w
 
 " -- auto cmd -- "
 autocmd vimenter * NERDTree

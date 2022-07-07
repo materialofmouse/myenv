@@ -8,6 +8,8 @@ export GOPATH=/home/$USER/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
+alias tvim='bash ~/myenv/bash/tmux-ide.sh'
+
 alias gb='git branch'
 alias gs='git status'
 alias gc='git checkout'
