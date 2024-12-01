@@ -4,7 +4,7 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export GOPATH=/home/$USER/go
+#export GOPATH=/home/$USER/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
