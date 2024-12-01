@@ -2,3 +2,4 @@
 ln -fs $(pwd)/bash/.bashrc ~/.bashrc
 ln -fs $(pwd)/vim/.vimrc ~/.vimrc
 ln -fds $(pwd)/vim/.vim ~/.vim
+ln -fs $(pwd)/screen/.screenrc ~/.screenrc
