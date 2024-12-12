@@ -3,3 +3,6 @@ defencoding utf8
 encoding utf8 utf8
 
 escape ^Xx
+
+termcapinfo xterm* ti@:te@
+defscrollback 100000
